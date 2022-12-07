@@ -8,39 +8,213 @@
   </div>
   <section class="container one">
     <div class="pokemonup">
-      <h1>pikachu</h1>
+      <h1>
+          <div *ngFor="let pokemonArcan of pokemonArcanine">
+            <div class="name-pokemon">
+              {{ pokemonArcan.name }}
+            </div>
+            <div class="imagen-pokemon">
+              <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+              <div class="card-body">
+                <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+              </div>
+            </div>
+          </div>
+      </h1>
+    </div>
+    <div class="pokeball-item">
+      <div class="pokemon-btn"></div>
+    </div>
+    <div class="pokemonbottom">
+      <h1>
+        <div *ngFor="let pokemonArcan of pokemonArcanine">
+          <div class="name-pokemon">
+            {{ pokemonArcan.name }}
+          </div>
+          <div class="imagen-pokemon">
+            <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+            <div class="card-body">
+              <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+            </div>
+          </div>
+        </div>
+      </h1>
+    </div>
+
+  </section>
+  <section class="container two">
+    <div class="pokemonup">
+      <h1>
+          <div *ngFor="let pokemonArcan of pokemonArcanine">
+            <div class="name-pokemon">
+              {{ pokemonArcan.name }}
+            </div>
+            <div class="imagen-pokemon">
+              <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+              <div class="card-body">
+                <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+              </div>
+            </div>
+          </div>
+      </h1>
+    </div>
+    <div class="pokeball-item">
+      <div class="pokemon-btn"></div>
+    </div>
+    <div class="pokemonbottom">
+      <h1>
+        <div *ngFor="let pokemonArcan of pokemonArcanine">
+          <div class="name-pokemon">
+            {{ pokemonArcan.name }}
+          </div>
+          <div class="imagen-pokemon">
+            <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+            <div class="card-body">
+              <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+            </div>
+          </div>
+        </div>
+      </h1>
+    </div>
+  </section>
+  <section class="container three">
+    <div class="pokemonup">
+      <h1>
+          <div *ngFor="let pokemonArcan of pokemonArcanine">
+            <div class="name-pokemon">
+              {{ pokemonArcan.name }}
+            </div>
+            <div class="imagen-pokemon">
+              <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+              <div class="card-body">
+                <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+              </div>
+            </div>
+          </div>
+      </h1>
+    </div>
+    <div class="pokeball-item">
+      <div class="pokemon-btn"></div>
+    </div>
+    <div class="pokemonbottom">
+      <h1>
+        <div *ngFor="let pokemonArcan of pokemonArcanine">
+          <div class="name-pokemon">
+            {{ pokemonArcan.name }}
+          </div>
+          <div class="imagen-pokemon">
+            <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+            <div class="card-body">
+              <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+            </div>
+          </div>
+        </div>
+      </h1>
+    </div>
+  </section>
+  <section class="container four">
+    <div class="pokemonup">
+      <h1>
+          <div *ngFor="let pokemonArcan of pokemonArcanine">
+            <div class="name-pokemon">
+              {{ pokemonArcan.name }}
+            </div>
+            <div class="imagen-pokemon">
+              <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+              <div class="card-body">
+                <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+              </div>
+            </div>
+          </div>
+      </h1>
+    </div>
+    <div class="pokeball-item">
+      <div class="pokemon-btn"></div>
+    </div>
+    <div class="pokemonbottom">
+      <h1>
+        <div *ngFor="let pokemonArcan of pokemonArcanine">
+          <div class="name-pokemon">
+            {{ pokemonArcan.name }}
+          </div>
+          <div class="imagen-pokemon">
+            <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+            <div class="card-body">
+              <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+            </div>
+          </div>
+        </div>
+      </h1>
+    </div>
+  </section>
+  <section class="container five">
+    <div class="pokemonup">
+      <h1>
+          <div *ngFor="let pokemonArcan of pokemonArcanine">
+            <div class="name-pokemon">
+              {{ pokemonArcan.name }}
+            </div>
+            <div class="imagen-pokemon">
+              <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+              <div class="card-body">
+                <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+              </div>
+            </div>
+          </div>
+      </h1>
+    </div>
+    <div class="pokeball-item">
+      <div class="pokemon-btn"></div>
+    </div>
+    <div class="pokemonbottom">
+      <h1>
+        <div *ngFor="let pokemonArcan of pokemonArcanine">
+          <div class="name-pokemon">
+            {{ pokemonArcan.name }}
+          </div>
+          <div class="imagen-pokemon">
+            <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+            <div class="card-body">
+              <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+            </div>
+          </div>
+        </div>
+      </h1>
+    </div>
+  </section>
+  <section class="container six">
+    <div class="pokemonup">
+      <h1>
+          <div *ngFor="let pokemonArcan of pokemonArcanine">
+            <div class="name-pokemon">
+              {{ pokemonArcan.name }}
+            </div>
+            <div class="imagen-pokemon">
+              <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+              <div class="card-body">
+                <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+              </div>
+            </div>
+          </div>
+      </h1>
     </div>
     <div class="pokeball-item">
       <div class="pokemon-btn"></div>
     </div>
     <div class="pokemon">
-      <h1>pikachu</h1>
-    </div>
-
-  </section>
-  <section class="container two">
-    <div class="pokeball-item">
-      <div class="pokemon-btn"></div>
-    </div>
-  </section>
-  <section class="container three">
-    <div class="pokeball-item">
-      <div class="pokemon-btn"></div>
-    </div>
-  </section>
-  <section class="container four">
-    <div class="pokeball-item">
-      <div class="pokemon-btn"></div>
-    </div>
-  </section>
-  <section class="container five">
-    <div class="pokeball-item">
-      <div class="pokemon-btn"></div>
-    </div>
-  </section>
-  <section class="container six">
-    <div class="pokeball-item">
-      <div class="pokemon-btn"></div>
+      <h1>
+        <div *ngFor="let pokemonArcan of pokemonArcanine">
+          <div class="name-pokemon">
+            {{ pokemonArcan.name }}
+          </div>
+          <div class="imagen-pokemon">
+            <img [src]="pokemonArcan.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+            <div class="card-body">
+              <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+            </div>
+          </div>
+        </div>
+      </h1>
     </div>
   </section>
 </section>

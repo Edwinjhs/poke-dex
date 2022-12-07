@@ -31,11 +31,10 @@ page: number = 1;
     if(value){
       this.pokemons = this.allPokemons.filter(x => x.name.includes (value));
       // filter by name all pokemons what are in POKEMONS length =======
-
-      (error:any)=>{
-        this.pokemons = [];
+      this.pokemonnotfound=false;
+      if (this.pokemons.length==0){
         this.pokemonnotfound=true;
-      };
+      }
     }else{
       this.pokeapiserviceservice.getAllPokemons();
       this.pokemonnotfound = false;
