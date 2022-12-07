@@ -3,7 +3,7 @@
     <img src="../../../assets/img/pokemon-name.webp" alt="">
   </div>
   <div>
-    <form class="d-flex"  (ngSubmit)="searchPokemon($event)">
+    <form class="d-flex"  (ngSubmit)="searchPokemon(buscar.value)">
       <input class="form-control me-2" type="search" placeholder="Find Your Pokemon Here" aria-label="Search" #buscar (input)="searchPokemon(buscar.value)">
       <button class="btn btn-outline-success" type="submit">SEARCH</button>
     </form>
@@ -61,7 +61,7 @@
   </div>
 </section>
 <pagination-controls class="pagination"
-previousLabel="Prev"
-nextLabel="Next"
-(pageChange)='OnchangePages($event)'>
+  previousLabel="Prev"
+  nextLabel="Next"
+  (pageChange)='OnchangePages($event)'>
 </pagination-controls>

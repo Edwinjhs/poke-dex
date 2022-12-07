@@ -1,25 +1,47 @@
-h1, h3
-  display: flex none
+.text-pokebola
+  display: flex
+  flex-direction: column
+  justify-content: center
   align-items: center
   justify-content: center
-  padding: 20px
+  padding: 20px 10px
+  margin: 60px 10px
+  div
+    h1
+      font-weight: 700
+.img-pokemon
+  width: 120px
+.desktop
+  display: none
 
 .all-box
   display: flex
   flex-direction: column
-
-
+  justify-content: center
+  align-items: center
 
 .container
   display: flex
+  justify-content: center
+  align-content: center
+  align-items: center
+  text-transform: uppercase
   padding: 10px
   width: 100%
   margin: 5px
-
-  // POKEMONS AL LADO DE LA POKEBOLA
+  background: #f3f0f0a6
+  border: 1px solid #00000054
+  border-radius: 25px
 
 .pokemonup
-  display: none
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  // POKEMONS AL LADO DE LA POKEBOLA
+.img-none-phone
+  display:  none
 
 .img-team-phone
   width: 200px
@@ -27,18 +49,11 @@ h1, h3
   padding: 10px
 
 
-
-.img-team
-  display: none
-  width: 200px
-  margin: 20px
-  padding: 20px
-
 @mixin item-base
   box-sizing: border-box
   position: relative
-  width: 75px
-  height: 75px
+  width: 150px
+  height: 150px
 
 @mixin after-before-base
   content: ""
@@ -47,7 +62,7 @@ h1, h3
 .pokeball-item
   @include item-base()
   background-color: white
-  border: 4px solid black
+  border: 6px solid black
   border-radius: 50%
   box-shadow: inset -5px 2px 0 2px lightgray
   cursor: pointer
@@ -73,14 +88,14 @@ h1, h3
 .pokemon-btn
   box-sizing: border-box
   position: absolute
-  width: 14px
-  height: 14px
+  width: 28px
+  height: 28px
   border-radius: 50%
   background: lightgray
-  border: 3px solid white
+  border: 5px solid white
   box-shadow: 0 0 0 4px black
-  top: calc( 50% - 7px )
-  left: calc( 50% - 7px )
+  top: calc( 47% - 7px )
+  left: calc( 47% - 7px )
   z-index: 10
 
 @keyframes shake-pokeball
@@ -97,32 +112,98 @@ h1, h3
   100%
     transform: translate(0,0) rotate(0)
 
+.label
+  padding: 5px
+  margin: 5px
+  color: rgb(0, 0, 0)
+  text-align: center
+  vertical-align: baseline
+  border-radius: 20px
+.name-pokemon
+  padding: 5px
+  margin: 5px
+  color: rgb(0, 0, 0)
+  text-align: center
+  vertical-align: baseline
+  border-radius: 20px
 
-@media screen and (min-width:840px)
-  .img-team-phone
-    display: none
-  .img-team
-    display: block
+.type-fire
+  background-color: rgba(246, 0, 0, 0.549)
+.type-poison
+  background-color: rgba(78, 38, 164, 0.548)
+.type-grass
+  background-color: rgba(5, 148, 5, 0.458)
+.type-flying
+  background-color: rgba(30, 136, 163, 0.45)
+.type-water
+  background-color: rgba(52, 65, 253, 0.419)
+.type-bug
+  background-color: rgba(138, 136, 66, 0.405)
+.type-normal
+  background-color: rgba(113, 175, 111, 0.42)
+.type-electric
+  background-color: rgba(231, 247, 0, 0.429)
+.type-ground
+  background-color: rgba(138, 71, 9, 0.353)
+.type-fairy
+  background-color: rgba(223, 84, 181, 0.327)
+.type-fighting
+  background-color: rgba(206, 67, 2, 0.531)
+.type-psychic
+  background-color: rgba(182, 2, 206, 0.488)
+.type-rock
+  background-color: rgba(145, 143, 143, 0.44)
+.type-ghost
+  background-color: rgba(48, 45, 78, 0.484)
+.type-ice
+  background-color: rgba(38, 238, 238, 0.499)
+.type-dragon
+  background-color: rgba(211, 121, 37, 0.405)
 
-  h1, h3
-    display: flex
-    align-items: center
-    justify-content: center
-    padding: 20px
 
+@media screen and (min-width: 768px)
   .all-box
     display: flex
-    justify-content: space-around
-    flex-flow: row wrap
-    align-items: center
+    flex-direction: row
+
   .container
     display: flex
     flex-direction: column
-    padding: 10px
-    width: 10%
     margin: 5px
-  .pokemon
-    display: none
+    background: #f3f0f09a
+    padding: 5px
+
   .pokemonup
+    display: flex
+    flex-direction: row
+
+  .desktop
     display: block
-//
+
+  .phone
+    display: none
+
+  .img-none-phone
+    display: block
+
+  .name-pokemon
+    display: flex
+    flex-direction: column
+    padding: 10px
+    margin: 15px
+    color: rgb(0, 0, 0)
+    text-align: center
+    vertical-align: baseline
+    border-radius: 10px
+
+  .label
+    display: flex
+    flex-direction: column
+    padding: 10px
+    margin: 15px
+    color: rgb(0, 0, 0)
+    text-align: center
+    vertical-align: baseline
+    border-radius: 10px
+  .img-pokemon
+    width: 170px
