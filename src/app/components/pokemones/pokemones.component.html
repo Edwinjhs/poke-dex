@@ -5,9 +5,34 @@
   <div>
     <form class="d-flex"  (ngSubmit)="searchPokemon($event)">
       <input class="form-control me-2" type="search" placeholder="Find Your Pokemon Here" aria-label="Search" #buscar (input)="searchPokemon(buscar.value)">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+      <button class="btn btn-outline-success" type="submit">SEARCH</button>
     </form>
   </div>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      FILTER FOR TYPE
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-primary">WATER</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-secondary">POISON</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-success">GRASS</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-danger">FIRE</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-warning">FLYING</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-info">BUG</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-warning">ELECTRIC</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-dark">NORMAL</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-danger">GROUND</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-light">PSYCHIC</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-info">FAIRY</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-secondary">ROCK</span></a></li>
+      <li><a class="dropdown-item" href="#"><span class="badge text-bg-primary">ICE</span></a></li>
+
+    </ul>
+  </div>
+
+
+
+
 </section>
 
 <div *ngIf="pokemonnotfound"> Pokemon no encontrado </div>

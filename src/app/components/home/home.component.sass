@@ -1,18 +1,15 @@
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// ============================ NAVBAR =====================
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-
-
-
-
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // =========================== POKEBOLA & PIKACHU ====================
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .all-page
-  padding:150px 10px
+  display: flex
+  flex-flow: row wrap
+  align-content: center
+  align-items: center
+  justify-content: center
+  padding:100px 10px
 .container
   display: flex
   flex-flow: row wrap
@@ -93,3 +90,32 @@
   100%
     transform: translate(0,0) rotate(0)
 
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// =========================== SLIDER ====================
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.carouselExampleInterval
+  display: flex
+  justify-content: center
+  align-content: center
+  align-items: center
+
+.carousel-item
+
+
+@media screen and (min-width:700px)
+  .all-page
+    display: flex
+    flex-direction: column
+    align-content: center
+    align-items: center
+    justify-content: center
+    padding:30px 10px
+  .carouselExampleInterval
+    margin: 0px 200px 50px 200px
+  .container
+    img
+      width: 420px
+      height: 420px
+
+  //
