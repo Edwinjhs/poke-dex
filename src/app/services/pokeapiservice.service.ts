@@ -10,19 +10,25 @@ export class PokeapiserviceService {
   }
 
   constructor(private http:HttpClient) { }
-
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   //================ GET ONLY THE NAME OF POKEMONS FROM THE API ===========================
-    getPokemons(limit: number, offset: number){
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+  getPokemons(limit: number, offset: number){
       return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
     }
-
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ============== GET DATA OF POKEMONS FROM THE API =============================
-    getMoreData(name:string){
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+  getMoreData(name:string){
       return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
     }
-
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ================== GET NAME AND DATA OF 151 POKEMONS in VAR POKEMONS ===================
-    getAllPokemons() {
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+  getAllPokemons() {
       var pokemons: any[]=[];
       this.getPokemons(151, 0).subscribe((response:any)=>{
         // Get 151 pokemons, and start from 0

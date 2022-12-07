@@ -7,12 +7,55 @@ import { PokeapiserviceService } from 'src/app/services/pokeapiservice.service';
 })
 export class MyteamComponent  implements OnInit{
   // pokemonArcanine: any =[]
+allPokemons: any[] = [];
+pokemonsTeam: any []= [];
+mostrar: boolean = false
 
-  constructor(private pokeapiservice: PokeapiserviceService){}
+  constructor(private pokeapiservice: PokeapiserviceService){  }
 
   ngOnInit(): void {
-    // this.pokemonArcanine = this.getArcanine();
+
+  this.allPokemons = this.pokeapiservice.getAllPokemons();
+
+  setTimeout(() => {
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==66)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==88)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==8)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==24)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==55)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==33)[0]);
+    console.log(this.pokemonsTeam);
+
+      }, 2000);
+
+
+
+    // this.allPokemons = this.pokeapiservice.getAllPokemons();
+    // this.pokemonsTeam.push(this.allPokemons[0])
+    // // this.loadpage();
+    // console.log(this.allPokemons);
+
+    // // this.allPokemons = this.pokeapiservice.getAllPokemons();
+    // // console.log(this.allPokemons);
+
+    // // // FILTRAR MIS POKEMONS
+    // this.pokemonsTeam.push(this.allPokemons.filter(x => x.id=20));
+    // console.log(this.allPokemons.filter(x => x.name == "pikachu"));
+    // this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==70));
+    // this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==120));
+    // this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==24));
+    // this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==6));
+    // this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==3));
+    // console.log(this.pokemonsTeam);
+
   }
+
+//  async loadpage (){
+//   this.allPokemons = await this.pokeapiservice.getAllPokemons();
+//   this.pokemonsTeam.push(this.allPokemons.find(x => x.id==20));
+
+//  }
+
 
   // getArcanine(){
   //   // var pokemonArcanine: any[]=[];
