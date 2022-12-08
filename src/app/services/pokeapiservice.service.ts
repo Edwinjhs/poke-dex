@@ -5,11 +5,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PokeapiserviceService {
-  getArcanine(): any[] {
-    throw new Error('Method not implemented.');
-  }
+
 
   constructor(private http:HttpClient) { }
+
+  getTypesPokemons(limit: number=151, offset: number=0){
+    return this.http.get(`https://pokeapi.co/api/v2/types?limit=${limit}&offset=${offset}`)
+
+  }
+
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   //================ GET ONLY THE NAME OF POKEMONS FROM THE API ===========================
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -42,5 +46,17 @@ export class PokeapiserviceService {
       })
       return pokemons;
     }
+    // getCategories(){
+    //   var typesPokemons: any [] = [];
+    //   this.getTypesPokemons(151,0).subscribe((response: any) =>{
+    //     response.results.forEach(response);
+    //     typesPokemons.push(response)
 
+    // })
+    // return typesPokemons;
+    // // console.log(typesPokemons);
+    // }
 }
+
+
+

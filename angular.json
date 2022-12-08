@@ -25,9 +25,10 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "sass",
+
             "assets": [
-              "/src/opt2.png",
-              "src/assets"
+              "src/assets",
+              "src/favicon.ico"
             ],
             "styles": [
               "src/styles.sass"

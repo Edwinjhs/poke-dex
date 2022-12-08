@@ -56,13 +56,13 @@
                     ></a>
 
                     <!-- Instagram -->
-                    <a
+                    <!-- <a
                       class="btn btn-link btn-floating btn-lg text-dark m-1"
                       href="https://www.instagram.com/edwinjhs/"
                       role="button"
                       data-mdb-ripple-color="dark"
                       ><i class="fab fa-instagram"></i
-                    ></a>
+                    ></a> -->
 
                     <!-- Linkedin -->
                     <a
@@ -87,10 +87,31 @@
             </ul>
           </li>
         </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="d-flex"  (ngSubmit)="searchPokemon(buscar.value)">
+          <input class="form-control me-2" type="search" placeholder="Find Your Pokemon Here" aria-label="Search" #buscar (input)="searchPokemon(buscar.value)">
+          <button class="btn btn-outline-success" type="submit">SEARCH</button>
         </form>
+        <div *ngIf="pokemonnotfound" class="notfound-box">
+          <div class="notfound-class">
+            <div><h1>POKEMON NOT FOUND</h1></div>
+            <div><img src="../../../assets/img/giphy.gif" width="300px"  alt=""></div>
+            <div><h4>TRY AGAIN, DON'T FORGET SEARCH ONLY FOR THE NAME</h4></div>
+          </div>
+
+        </div>
+        <section class="card-of-pokemons carta-pokemon">
+          <div class="card text-center" *ngFor='let pokemon of pokemons' >
+            <div class="card-header name-fon-{{ pokemon.types[0].type.name }}">
+              {{ pokemon.name }}
+            </div>
+            <div class="card-body">
+              <img [src]="pokemon.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><span class="label type-{{ type_pokemon.type.name }}" *ngFor=" let type_pokemon of pokemon.types"> {{ type_pokemon.type.name }} </span></h5>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>

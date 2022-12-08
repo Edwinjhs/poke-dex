@@ -1,14 +1,18 @@
 .text-pokebola
   display: flex
   flex-direction: column
-  justify-content: center
   align-items: center
-  justify-content: center
+//   justify-content: center
   padding: 20px 10px
-  margin: 60px 10px
-  div
-    h1
-      font-weight: 700
+
+.title-one
+  text-align: center
+  font-weight: 700
+.subtitle
+  text-align: center
+  font-weight: 700
+
+
 .img-pokemon
   width: 120px
 .desktop
@@ -19,6 +23,7 @@
   flex-direction: column
   justify-content: center
   align-items: center
+  margin: 60px 5px
 
 .container
   display: flex
@@ -29,15 +34,58 @@
   padding: 10px
   width: 100%
   margin: 5px
-  background: #f3f0f0a6
+  // background: #f3f0f0a6
   border: 1px solid #00000054
   border-radius: 25px
+// COLOR DE CAJA SEGUN SU TIPO
+
+.caja-fon-fire
+  background-color: rgba(246, 0, 0, 0.549)
+.caja-fon-poison
+  background-color: rgba(78, 38, 164, 0.548)
+.caja-fon-grass
+  background-color: rgba(5, 148, 5, 0.458)
+.caja-fon-flying
+  background-color: rgba(30, 136, 163, 0.45)
+.caja-fon-water
+  background-color: rgba(52, 65, 253, 0.419)
+.caja-fon-bug
+  background-color: rgba(138, 136, 66, 0.405)
+.caja-fon-normal
+  background-color: rgba(113, 175, 111, 0.42)
+.caja-fon-electric
+  background-color: rgba(231, 247, 0, 0.429)
+.caja-fon-ground
+  background-color: rgba(138, 71, 9, 0.353)
+.caja-fon-fairy
+  background-color: rgba(223, 84, 181, 0.327)
+.caja-fon-fighting
+  background-color: rgba(206, 67, 2, 0.531)
+.caja-fon-psychic
+  background-color: rgba(182, 2, 206, 0.488)
+.caja-fon-rock
+  background-color: rgba(145, 143, 143, 0.44)
+.caja-fon-ghost
+  background-color: rgba(48, 45, 78, 0.484)
+.caja-fon-ice
+  background-color: rgba(38, 238, 238, 0.499)
+.caja-fon-dragon
+  background-color: rgba(211, 121, 37, 0.405)
+
+
+
+
+
+
+
+
+  //
 
 .pokemonup
   display: flex
   flex-direction: column
   justify-content: center
-  align-items: center
+
 
   // POKEMONS AL LADO DE LA POKEBOLA
 .img-none-phone
@@ -75,7 +123,7 @@
   &:before
     @include after-before-base()
     background: red
-    width: 100%
+    width: 150%
     height: 50%
 
   &:after
@@ -98,6 +146,9 @@
   left: calc( 47% - 7px )
   z-index: 10
 
+.pokemon-btn:hover
+  background: #eb0a0a
+
 @keyframes shake-pokeball
   0%
     transform: translate(0,0) rotate(0)
@@ -111,6 +162,11 @@
     transform: translate(10px,0)  rotate(10deg)
   100%
     transform: translate(0,0) rotate(0)
+.name-pokemon
+  font-weight: 700
+  color: #000000
+  text-align: center
+  font-size: 20px
 
 .label
   padding: 5px
@@ -119,14 +175,54 @@
   text-align: center
   vertical-align: baseline
   border-radius: 20px
+  font-size: 14px
 .name-pokemon
+  font-size: 14px
   padding: 5px
   margin: 5px
   color: rgb(0, 0, 0)
   text-align: center
   vertical-align: baseline
   border-radius: 20px
+  background: rgba(207, 207, 207, 0.788)
 
+// fondo con color del nombre
+.name-fon-fire
+  background-color: rgba(246, 0, 0, 0.549)
+.name-fon-poison
+  background-color: rgba(78, 38, 164, 0.548)
+.name-fon-grass
+  background-color: rgba(5, 148, 5, 0.458)
+.name-fon-flying
+  background-color: rgba(30, 136, 163, 0.45)
+.name-fon-water
+  background-color: rgba(52, 65, 253, 0.419)
+.name-fon-bug
+  background-color: rgba(138, 136, 66, 0.405)
+.name-fon-normal
+  background-color: rgba(113, 175, 111, 0.42)
+.name-fon-electric
+  background-color: rgba(231, 247, 0, 0.429)
+.name-fon-ground
+  background-color: rgba(138, 71, 9, 0.353)
+.name-fon-fairy
+  background-color: rgba(223, 84, 181, 0.327)
+.name-fon-fighting
+  background-color: rgba(206, 67, 2, 0.531)
+.name-fon-psychic
+  background-color: rgba(182, 2, 206, 0.488)
+.name-fon-rock
+  background-color: rgba(145, 143, 143, 0.44)
+.name-fon-ghost
+  background-color: rgba(48, 45, 78, 0.484)
+.name-fon-ice
+  background-color: rgba(38, 238, 238, 0.499)
+.name-fon-dragon
+  background-color: rgba(211, 121, 37, 0.405)
+  // final fondo de nombre color
+
+.pokemon-btn:hover
+   background: #df1f1f
 .type-fire
   background-color: rgba(246, 0, 0, 0.549)
 .type-poison
@@ -160,7 +256,40 @@
 .type-dragon
   background-color: rgba(211, 121, 37, 0.405)
 
+// TYPES COLORS HOVER =============
 
+.type-fire:hover
+  background-color: rgba(246, 0, 0, 0.616)
+.type-poison:hover
+  background-color: rgba(78, 38, 164, 0.644)
+.type-grass:hover
+  background-color: rgba(5, 148, 5, 0.63)
+.type-flying:hover
+  background-color: rgba(30, 136, 163, 0.658)
+.type-water:hover
+  background-color: rgba(52, 65, 253, 0.637)
+.type-bug:hover
+  background-color: rgba(138, 136, 66, 0.616)
+.type-normal:hover
+  background-color: rgba(113, 175, 111, 0.651)
+.type-electric:hover
+  background-color: rgba(231, 247, 0, 0.616)
+.type-ground:hover
+  background-color: rgba(138, 71, 9, 0.568)
+.type-fairy:hover
+  background-color: rgba(223, 84, 181, 0.623)
+.type-fighting:hover
+  background-color: rgba(206, 67, 2, 0.63)
+.type-psychic:hover
+  background-color: rgba(182, 2, 206, 0.651)
+.type-rock:hover
+  background-color: rgba(145, 143, 143, 0.692)
+.type-ghost:hover
+  background-color: rgba(48, 45, 78, 0.733)
+.type-ice:hover
+  background-color: rgba(38, 238, 238, 0.658)
+.type-dragon:hover
+  background-color: rgba(211, 121, 37, 0.747)
 @media screen and (min-width: 768px)
   .all-box
     display: flex
@@ -170,7 +299,7 @@
     display: flex
     flex-direction: column
     margin: 5px
-    background: #f3f0f09a
+    // background: #f3f0f09a
     padding: 5px
 
   .pokemonup
@@ -185,6 +314,9 @@
 
   .img-none-phone
     display: block
+    padding: 20px
+    margin: 30px 0px 60px 0px
+
 
   .name-pokemon
     display: flex
@@ -207,3 +339,6 @@
     border-radius: 10px
   .img-pokemon
     width: 170px
+
+  // .container:hover
+  //   background: #f3f0f0b4

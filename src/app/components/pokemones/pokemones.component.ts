@@ -12,7 +12,8 @@ pokemons: any []=[];
 pokemonnotfound: boolean = false;
 allPokemons: any[] = [];
 page: number = 1;
-
+pokemonsalltypes: any[] = [];
+pokemonstypes: any[] = [];
 
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ================ CONSTRUCTOR FROM THE SERVICE WHAT HAVE THE API =======
@@ -22,6 +23,16 @@ page: number = 1;
   ngOnInit(): void {
       this.allPokemons =this.pokeapiserviceservice.getAllPokemons();
       this.pokemons = this.allPokemons
+      this.pokemonsalltypes = this.pokeapiserviceservice.getAllPokemons();
+      this.pokemonstypes = this.pokemonsalltypes
+
+    //   setTimeout(() => {
+    //   this.pokemonstypes.push(this.pokemonsalltypes.filter(x => x.types[0].type.name=="grass"))
+    //   console.log(this.pokemonsalltypes.filter(x => x.types[0].type.name=="grass"));
+    //     }, 2000);
+  }
+  filtertypes(){
+    
   }
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ================ SEARCH BAR AND FILTER SERACH FROM POKEMONS =======
@@ -47,4 +58,13 @@ page: number = 1;
   OnchangePages(event:any){
     this.page=event;
   }
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // ================== FILTER FOR TYPE ===============
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
 }
+
+

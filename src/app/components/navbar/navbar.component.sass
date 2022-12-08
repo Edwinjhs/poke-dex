@@ -1,11 +1,12 @@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // ==================POKEBOLA=====================
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 @mixin item-base
   box-sizing: border-box
   position: relative
-  width: 75px
-  height: 75px
+  width: 100px
+  height: 100px
 
 @mixin after-before-base
   content: ""
@@ -37,11 +38,13 @@
     height: 4px
     background: black
 
+.pokemon-btn:hover
+   background: #df1f1f
 .pokemon-btn
   box-sizing: border-box
   position: absolute
-  width: 14px
-  height: 14px
+  width: 18px
+  height: 18px
   border-radius: 50%
   background: lightgray
   border: 3px solid white
@@ -64,3 +67,162 @@
   100%
     transform: translate(0,0) rotate(0)
 
+.label
+  padding: 5px
+  margin: 5px
+  color: rgb(0, 0, 0)
+  text-align: center
+  vertical-align: baseline
+  border-radius: 20px
+.notfound-box
+  display: flex
+  align-items: center
+  align-content: center
+  justify-content: center
+  margin: 20px 5px
+
+.notfound-class
+  display: flex
+  flex-direction: column
+  padding: 10px
+  align-items: center
+  justify-content: center
+  align-content: center
+  text-align: center
+  background: white
+  width: 300px
+  border-radius: 25px
+  box-shadow: 5px 5px 5px black
+  div
+    h1
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      align-content: center
+      text-align: center
+    h4
+      display: flex
+      text-align: center
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      align-content: center
+
+.name-pokemon
+  padding: 5px
+  margin: 5px
+  color: rgb(0, 0, 0)
+  text-align: center
+  vertical-align: baseline
+  border-radius: 20px
+
+// fondo con color del nombre
+.name-fon-fire
+  background-color: rgba(246, 0, 0, 0.549)
+.name-fon-poison
+  background-color: rgba(78, 38, 164, 0.548)
+.name-fon-grass
+  background-color: rgba(5, 148, 5, 0.458)
+.name-fon-flying
+  background-color: rgba(30, 136, 163, 0.45)
+.name-fon-water
+  background-color: rgba(52, 65, 253, 0.419)
+.name-fon-bug
+  background-color: rgba(138, 136, 66, 0.405)
+.name-fon-normal
+  background-color: rgba(113, 175, 111, 0.42)
+.name-fon-electric
+  background-color: rgba(231, 247, 0, 0.429)
+.name-fon-ground
+  background-color: rgba(138, 71, 9, 0.353)
+.name-fon-fairy
+  background-color: rgba(223, 84, 181, 0.327)
+.name-fon-fighting
+  background-color: rgba(206, 67, 2, 0.531)
+.name-fon-psychic
+  background-color: rgba(182, 2, 206, 0.488)
+.name-fon-rock
+  background-color: rgba(145, 143, 143, 0.44)
+.name-fon-ghost
+  background-color: rgba(48, 45, 78, 0.484)
+.name-fon-ice
+  background-color: rgba(38, 238, 238, 0.499)
+.name-fon-dragon
+  background-color: rgba(211, 121, 37, 0.405)
+  // final fondo de nombre color
+
+.pokemon-btn:hover
+   background: #df1f1f
+.type-fire
+  background-color: rgba(246, 0, 0, 0.549)
+.type-poison
+  background-color: rgba(78, 38, 164, 0.548)
+.type-grass
+  background-color: rgba(5, 148, 5, 0.458)
+.type-flying
+  background-color: rgba(30, 136, 163, 0.45)
+.type-water
+  background-color: rgba(52, 65, 253, 0.419)
+.type-bug
+  background-color: rgba(138, 136, 66, 0.405)
+.type-normal
+  background-color: rgba(113, 175, 111, 0.42)
+.type-electric
+  background-color: rgba(231, 247, 0, 0.429)
+.type-ground
+  background-color: rgba(138, 71, 9, 0.353)
+.type-fairy
+  background-color: rgba(223, 84, 181, 0.327)
+.type-fighting
+  background-color: rgba(206, 67, 2, 0.531)
+.type-psychic
+  background-color: rgba(182, 2, 206, 0.488)
+.type-rock
+  background-color: rgba(145, 143, 143, 0.44)
+.type-ghost
+  background-color: rgba(48, 45, 78, 0.484)
+.type-ice
+  background-color: rgba(38, 238, 238, 0.499)
+.type-dragon
+  background-color: rgba(211, 121, 37, 0.405)
+
+// TYPES COLORS HOVER =============
+
+.type-fire:hover
+  background-color: rgba(246, 0, 0, 0.616)
+.type-poison:hover
+  background-color: rgba(78, 38, 164, 0.644)
+.type-grass:hover
+  background-color: rgba(5, 148, 5, 0.63)
+.type-flying:hover
+  background-color: rgba(30, 136, 163, 0.658)
+.type-water:hover
+  background-color: rgba(52, 65, 253, 0.637)
+.type-bug:hover
+  background-color: rgba(138, 136, 66, 0.616)
+.type-normal:hover
+  background-color: rgba(113, 175, 111, 0.651)
+.type-electric:hover
+  background-color: rgba(231, 247, 0, 0.616)
+.type-ground:hover
+  background-color: rgba(138, 71, 9, 0.568)
+.type-fairy:hover
+  background-color: rgba(223, 84, 181, 0.623)
+.type-fighting:hover
+  background-color: rgba(206, 67, 2, 0.63)
+.type-psychic:hover
+  background-color: rgba(182, 2, 206, 0.651)
+.type-rock:hover
+  background-color: rgba(145, 143, 143, 0.692)
+.type-ghost:hover
+  background-color: rgba(48, 45, 78, 0.733)
+.type-ice:hover
+  background-color: rgba(38, 238, 238, 0.658)
+.type-dragon:hover
+  background-color: rgba(211, 121, 37, 0.747)
+
+.card
+  padding: 5px
+  margin: 7px
+  text-transform: uppercase

@@ -6,7 +6,6 @@ import { PokeapiserviceService } from 'src/app/services/pokeapiservice.service';
   styleUrls: ['./myteam.component.sass']
 })
 export class MyteamComponent  implements OnInit{
-  // pokemonArcanine: any =[]
 allPokemons: any[] = [];
 pokemonsTeam: any []= [];
 mostrar: boolean = false
@@ -18,16 +17,15 @@ mostrar: boolean = false
   this.allPokemons = this.pokeapiservice.getAllPokemons();
 
   setTimeout(() => {
-    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==66)[0]);
-    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==88)[0]);
-    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==8)[0]);
-    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==24)[0]);
-    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==55)[0]);
-    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==33)[0]);
-    console.log(this.pokemonsTeam);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==17)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==34)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==42)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==44)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==95)[0]);
+    this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==146)[0]);
+    // console.log(this.pokemonsTeam);
 
       }, 2000);
-
 
 
     // this.allPokemons = this.pokeapiservice.getAllPokemons();
@@ -49,6 +47,9 @@ mostrar: boolean = false
     // console.log(this.pokemonsTeam);
 
   }
+
+
+
 
 //  async loadpage (){
 //   this.allPokemons = await this.pokeapiservice.getAllPokemons();
