@@ -40,4 +40,7 @@ export class NavbarComponent implements OnInit {
         this.pokemonnotfound = false;
       }
     }
+    OnchangePages(event:any){
+      this.page=event;
+    }
 }

@@ -1,13 +1,13 @@
 <nav class="navbar bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="../../../assets/img/catchall.png" width="150px" alt=" catch e'm all"></a>
+    <a class="navbar-brand" href="home"><img src="assets/img/catchall.png" width="150px" alt=" catch e'm all"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-          <section class="container">
+          <section routerLink="home" routerLinkActive="active-link" class="container">
             <div class="pokeball-item">
               <div class="pokemon-btn"></div>
             </div>
@@ -18,18 +18,18 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">POKEDEX</a>
+            <a class="nav-link" href="pokemones">POKEDEX</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               ABOUT ME
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">MY TEAM</a></li>
-              <li><a class="dropdown-item" href="#">CONTACT ME</a></li>
+              <li><a class="dropdown-item" href="myteam">MY TEAM</a></li>
+              <li><a class="dropdown-item" href="contact">CONTACT ME</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -94,13 +94,13 @@
         <div *ngIf="pokemonnotfound" class="notfound-box">
           <div class="notfound-class">
             <div><h1>POKEMON NOT FOUND</h1></div>
-            <div><img src="../../../assets/img/giphy.gif" width="300px"  alt=""></div>
+            <div><img src="assets/img/giphy.gif" width="300px"  alt=""></div>
             <div><h4>TRY AGAIN, DON'T FORGET SEARCH ONLY FOR THE NAME</h4></div>
           </div>
 
         </div>
         <section class="card-of-pokemons carta-pokemon">
-          <div class="card text-center" *ngFor='let pokemon of pokemons' >
+          <div class="card text-center" *ngFor='let pokemon of pokemons | paginate:{ itemsPerPage: 6, currentPage:page, totalItems: pokemons.length}' >
             <div class="card-header name-fon-{{ pokemon.types[0].type.name }}">
               {{ pokemon.name }}
             </div>
@@ -112,7 +112,13 @@
             </div>
           </div>
         </section>
+        <pagination-controls class="pagination"
+                previousLabel="Prev"
+                nextLabel="Next"
+                (pageChange)='OnchangePages($event)'>
+        </pagination-controls>
       </div>
     </div>
   </div>
 </nav>
+
