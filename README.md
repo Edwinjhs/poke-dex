@@ -1,27 +1,46 @@
-# PokeDex
+### PokeDex Project
+Design by. Edwin Hernández
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+<p align=center>
+	<img src="https://i.postimg.cc/bv6z3SCY/panda-logo.png)">
+</p>
 
-## Development server
+- Pokedex is a portable electronic encyclopedia that Pokémon Trainers carry with them to automatically record the tokens of all the various Pokémon species seen and caught during their trainer journey.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- This project was generated with [Angular CLI], bootstrap, Swiper, Npx pagination, PokeApi, Styles SASS
 
-## Code scaffolding
+###7 Components
+  -NavBar:
+  -Home
+  -Footer
+  -Contact
+  -MyTeam
+  -Pokemons
+  -PageNotFound
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+###1 Servicio
+-PokeApiService
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+------------
 
-## Running unit tests
+- The design is fully adapted to be used on both mobile and desktop devices.  RESPONSIVO
+- Se enlazo la API creando un servicio y usando el siguiente codigo
+<p align=center>
+	<img src="https://i.postimg.cc/NFd53GxB/servicio-capt.png">
+</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+------------
 
-## Running end-to-end tests
+###API
+An API is a set of definitions and protocols for building and integrating application software. It’s sometimes referred to as a contract between an information provider and an information user—establishing the content required from the consumer (the call) and the content required by the producer (the response). For example, the API design for a weather service could specify that the user supply a zip code and that the producer reply with a 2-part answer, the first being the high temperature, and the second being the low.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+###REST
+REST is a set of architectural constraints, not a protocol or a standard. API developers can implement REST in a variety of ways.
 
-## Further help
+When a client request is made via a RESTful API, it transfers a representation of the state of the resource to the requester or endpoint. This information, or representation, is delivered in one of several formats via HTTP: JSON (Javascript Object Notation), HTML, XLT, Python, PHP, or plain text. JSON is the most generally popular file format to use because, despite its name, it’s language-agnostic, as well as readable by both humans and machines. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Something else to keep in mind: Headers and parameters are also important in the HTTP methods of a RESTful API HTTP request, as they contain important identifier information as to the request's metadata, authorization, uniform resource identifier (URI), caching, cookies, and more. There are request headers and response headers, each with their own HTTP connection information and status codes.
+
+
+------------

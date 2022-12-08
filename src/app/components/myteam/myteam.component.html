@@ -1,13 +1,13 @@
 <section class="text-pokebola">
   <div><h1 class="title-one">MY TEAM POKEMON</h1></div>
   <div><h3 class="subtitle">Abre la pokebola para descubrir mi equipo</h3></div>
-  <img class="img-team-phone" src="/assets/img/myteam-ash.png" alt="ash pokemon">
+  <img class="img-team-phone" src="assets/img/myteam-ash.png" alt="ash pokemon">
   <div class="pokeball-item phone" (click)="mostrar = !mostrar">
     <div class="pokemon-btn"></div>
   </div>
 </section>
 <section class="all-box">
-  <img src="../../../assets/img/pokeball.ico" class="img-none-phone" alt="pokebola" (click)="mostrar = !mostrar">
+  <img src="assets/img/pokeball.ico" class="img-none-phone" alt="pokebola" (click)="mostrar = !mostrar">
   <div class="pokemonup" *ngIf="mostrar">
     <section class="container caja-fon-{{ pokemonArcan.types[0].type.name }}" *ngFor="let pokemonArcan of pokemonsTeam" >
       <div class="name-pokemon ">
