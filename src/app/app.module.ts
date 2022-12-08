@@ -12,6 +12,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MyteamComponent } from './components/myteam/myteam.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { ContactComponent } from './components/contact/contact.component';
     NavbarComponent,
     FooterComponent,
     MyteamComponent,
-    ContactComponent
+    ContactComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
