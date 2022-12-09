@@ -100,17 +100,19 @@
 
         </div>
         <section class="card-of-pokemons carta-pokemon">
-          <div class="card text-center" *ngFor='let pokemon of pokemons | paginate:{ itemsPerPage: 6, currentPage:page, totalItems: pokemons.length}' >
-            <div class="card-header name-fon-{{ pokemon.types[0].type.name }}">
-              {{ pokemon.name }}
+          <a href="#">
+            <div class="card text-center" *ngFor='let pokemon of pokemons | paginate:{ itemsPerPage: 6, currentPage:page, totalItems: pokemons.length}' >
+              <div class="card-header name-fon-{{ pokemon.types[0].type.name }}">
+                {{ pokemon.name }}
+              </div>
+              <div class="card-body">
+                <img [src]="pokemon.sprites.other['official-artwork'].front_default"  width="200px" class="img-pokemon" alt="imagen de pokemon">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><span class="label type-{{ type_pokemon.type.name }}" *ngFor=" let type_pokemon of pokemon.types"> {{ type_pokemon.type.name }} </span></h5>
+              </div>
             </div>
-            <div class="card-body">
-              <img [src]="pokemon.sprites.other['official-artwork'].front_default"  width="200px" class="img-pokemon" alt="imagen de pokemon">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><span class="label type-{{ type_pokemon.type.name }}" *ngFor=" let type_pokemon of pokemon.types"> {{ type_pokemon.type.name }} </span></h5>
-            </div>
-          </div>
+          </a>
         </section>
         <pagination-controls class="pagination"
                 previousLabel="Prev"
