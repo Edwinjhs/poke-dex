@@ -100,7 +100,7 @@
 
         </div>
         <section class="card-of-pokemons carta-pokemon">
-          <a href="#">
+          <a href="pagenotfound">
             <div class="card text-center" *ngFor='let pokemon of pokemons | paginate:{ itemsPerPage: 6, currentPage:page, totalItems: pokemons.length}' >
               <div class="card-header name-fon-{{ pokemon.types[0].type.name }}">
                 {{ pokemon.name }}
