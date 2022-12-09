@@ -17,30 +17,31 @@ pokemonstypes: any[] = [];
 mostrar: boolean = true;
 
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-  // ================ CONSTRUCTOR FROM THE SERVICE WHAT HAVE THE API =======
+  // ========= CONSTRUCTOR FROM THE SERVICE WHAT HAVE THE API =========
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
   constructor(private pokeapiserviceservice: PokeapiserviceService){}
   ngOnInit(): void {
       this.allPokemons =this.pokeapiserviceservice.getAllPokemons();
       this.pokemons = this.allPokemons
-      this.pokemonsalltypes = this.pokeapiserviceservice.getAllPokemons();
-      this.pokemonstypes = this.pokemonsalltypes
-
-    //   setTimeout(() => {
-    //   this.pokemonstypes.push(this.pokemonsalltypes.filter(x => x.types[0].type.name=="grass"))
-    //   console.log(this.pokemonsalltypes.filter(x => x.types[0].type.name=="grass"));
-    //     }, 2000);
+      this.pokemonstypes = this.allPokemons
   }
-  // this.dataservice.getMoreData(this.name.toLowerCase()).subscribe(
-    //   (d:any) =>{
-  filtertypes(){
-
+  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // ====================== FILTER FOR TYPES ===========================
+  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  filtertypes(value:string){
+    this.pokemons= []
+    this.allPokemons.forEach((element) => {
+      element.types.forEach((type:any) => {
+        if (type.type.name ==value){
+          this.pokemons.push(element)
+        }
+      })
+    });
   }
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ================ SEARCH BAR AND FILTER SERACH FROM POKEMONS =======
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
   searchPokemon(value:any){
     if(value){
       this.pokemons = this.allPokemons.filter(x => x.name.includes (value.toLowerCase()));
@@ -54,7 +55,6 @@ mostrar: boolean = true;
       this.pokemonnotfound = false;
     }
   }
-
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ================== FOR THE NAVEGATION ===============
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -65,7 +65,9 @@ mostrar: boolean = true;
   // ================== FILTER FOR TYPE ===============
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+  guardarLocalStorage(){
 
+  }
 
 
 }
