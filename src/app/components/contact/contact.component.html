@@ -1,10 +1,27 @@
-<section class="box-contact">
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Edwin.ejhnsn@gmail.com</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+<section class="text-pokebola">
+  <div><h1 class="title-one">YOUR TEAM POKEMON</h1></div>
+  <div><h3 class="subtitle">Open your pokeball to find your team</h3></div>
+  <img class="img-team-phone" src="assets/img/yourteam.png" alt="ash pokemon">
+  <div class="pokeball-item phone" (click)="mostrar = !mostrar">
+    <div class="pokemon-btn"></div>
   </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Enviame tu sugerencia</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</section>
+<section class="all-box">
+  <img src="assets/img/pokeball.ico" class="img-none-phone" alt="pokebola" (click)="mostrar = !mostrar">
+  <div class="pokemonup" *ngIf="mostrar">
+    <section class="container caja-fon-{{ pokemonArcan.types[0].type.name }}" *ngFor="let pokemonArcan of pokemonsTeam" >
+      <div class="name-pokemon ">
+        {{ pokemonArcan.name }}
+      </div>
+      <div class="imagen-pokemon">
+        <img [src]="pokemonArcan.sprites.versions['generation-v']['black-white'].animated.front_default" class="img-pokemon" alt="imagen de pokemon">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><b class="label type-{{ type_pokemonArc.type.name }}" *ngFor=" let type_pokemonArc of pokemonArcan.types"> {{ type_pokemonArc.type.name }} </b></h5>
+      </div>
+      <div class="pokeball-item desktop">
+        <div class="pokemon-btn"></div>
+      </div>
+    </section>
   </div>
 </section>

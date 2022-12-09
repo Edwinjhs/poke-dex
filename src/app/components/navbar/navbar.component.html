@@ -18,18 +18,18 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home">Home</a>
+            <a class="nav-link" aria-current="page" href="home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pokemones">POKEDEX</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ABOUT ME
+              TEAMS
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="myteam">MY TEAM</a></li>
-              <li><a class="dropdown-item" href="contact">CONTACT ME</a></li>
+              <li><a class="dropdown-item" href="contact">YOUR TEAM</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -88,7 +88,7 @@
           </li>
         </ul>
         <form class="d-flex"  (ngSubmit)="searchPokemon(buscar.value)">
-          <input class="form-control me-2" type="search" placeholder="Find Your Pokemon Here" aria-label="Search" #buscar (input)="searchPokemon(buscar.value)">
+          <input class="form-control me-2" type="search" placeholder="GOTTA SEARCH 'EM ALL" aria-label="Search" #buscar (input)="searchPokemon(buscar.value)">
           <button class="btn btn-outline-success" type="submit">SEARCH</button>
         </form>
         <div *ngIf="pokemonnotfound" class="notfound-box">

@@ -10,6 +10,18 @@
   align-items: center
   justify-content: center
   padding:100px 10px
+  width: 100%
+  height: 800px
+  background: linear-gradient(-35deg, rgb(156, 4, 4) 0%, #ff0000 25%, indigo 40%, rgb(7, 41, 231) 75%, #026ecb 100%)
+  background-size: 400%
+  background-position: 0 100%
+  transition: all 500ms ease-out
+
+  &:hover
+    background-position: 100% 0
+    transition: all 500ms ease-out
+
+
 .container
   display: flex
   flex-flow: row wrap

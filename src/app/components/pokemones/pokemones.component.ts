@@ -14,6 +14,7 @@ allPokemons: any[] = [];
 page: number = 1;
 pokemonsalltypes: any[] = [];
 pokemonstypes: any[] = [];
+mostrar: boolean = true;
 
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ================ CONSTRUCTOR FROM THE SERVICE WHAT HAVE THE API =======
