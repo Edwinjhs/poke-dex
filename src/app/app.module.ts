@@ -11,8 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MyteamComponent } from './components/myteam/myteam.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { YourteamComponent } from './components/yourteam/yourteam.component';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     NavbarComponent,
     FooterComponent,
     MyteamComponent,
-    ContactComponent,
+    YourteamComponent,
     PagenotfoundComponent
   ],
   imports: [
