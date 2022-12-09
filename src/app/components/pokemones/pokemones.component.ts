@@ -31,8 +31,10 @@ pokemonstypes: any[] = [];
     //   console.log(this.pokemonsalltypes.filter(x => x.types[0].type.name=="grass"));
     //     }, 2000);
   }
+  // this.dataservice.getMoreData(this.name.toLowerCase()).subscribe(
+    //   (d:any) =>{
   filtertypes(){
-    
+
   }
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ================ SEARCH BAR AND FILTER SERACH FROM POKEMONS =======
@@ -40,7 +42,7 @@ pokemonstypes: any[] = [];
 
   searchPokemon(value:any){
     if(value){
-      this.pokemons = this.allPokemons.filter(x => x.name.includes (value));
+      this.pokemons = this.allPokemons.filter(x => x.name.includes (value.toLowerCase()));
       // filter by name all pokemons what are in POKEMONS length =======
       this.pokemonnotfound=false;
       if (this.pokemons.length==0){

@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
 
     searchPokemon(value:any){
       if(value){
-        this.pokemons = this.allPokemons.filter(x => x.name.includes (value));
+        this.pokemons = this.allPokemons.filter(x => x.name.includes (value.toLowerCase()));
         // filter by name all pokemons what are in POKEMONS length =======
         this.pokemonnotfound=false;
         if (this.pokemons.length==0){

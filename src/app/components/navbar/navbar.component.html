@@ -105,7 +105,7 @@
               {{ pokemon.name }}
             </div>
             <div class="card-body">
-              <img [src]="pokemon.sprites.front_default" class="img-pokemon" alt="imagen de pokemon">
+              <img [src]="pokemon.sprites.other['official-artwork'].front_default"  width="200px" class="img-pokemon" alt="imagen de pokemon">
             </div>
             <div class="card-body">
               <h5 class="card-title"><span class="label type-{{ type_pokemon.type.name }}" *ngFor=" let type_pokemon of pokemon.types"> {{ type_pokemon.type.name }} </span></h5>

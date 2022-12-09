@@ -56,6 +56,9 @@ export class PokeapiserviceService {
     // return typesPokemons;
     // // console.log(typesPokemons);
     // }
+
+    // this.dataservice.getMoreData(this.name.toLowerCase()).subscribe(
+    //   (d:any) =>{
 }
 
 
