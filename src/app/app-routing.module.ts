@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'myteam', component: MyteamComponent},
   {path: 'yourteam', component: YourteamComponent},
   {path: 'pokemones', component:PokemonesComponent},
+  {path: 'pagenotfound',component: PagenotfoundComponent },
   {path: '**',component: PagenotfoundComponent }
 
 ];
