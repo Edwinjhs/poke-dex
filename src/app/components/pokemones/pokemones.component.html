@@ -23,19 +23,21 @@
       FILTER FOR TYPE
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-primary">WATER</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-secondary">POISON</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-success">GRASS</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-danger">FIRE</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-warning">FLYING</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-info">BUG</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-warning">ELECTRIC</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-dark">NORMAL</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-danger">GROUND</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-light">PSYCHIC</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-info">FAIRY</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-secondary">ROCK</span></a></li>
-      <li><a class="dropdown-item" href="#"><span class="badge text-bg-primary">ICE</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('water')"><span class="badge text-bg-primary">WATER</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('poison')"><span class="badge text-bg-secondary">POISON</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('grass')"><span class="badge text-bg-success">GRASS</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('fire')"><span class="badge text-bg-danger">FIRE</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('flying')"><span class="badge text-bg-warning">FLYING</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('bug')"><span class="badge text-bg-info">BUG</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('electric')"><span class="badge text-bg-warning">ELECTRIC</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('normal')"><span class="badge text-bg-dark">NORMAL</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('ground')"><span class="badge text-bg-danger">GROUND</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('psychic')"><span class="badge text-bg-light">PSYCHIC</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('fairy')"><span class="badge text-bg-info">FAIRY</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('rock')"><span class="badge text-bg-secondary">ROCK</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('ice')"><span class="badge text-bg-primary">ICE</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('dragon')"><span class="badge text-bg-danger">DRAGON</span></a></li>
+
     </ul>
   </div>
 

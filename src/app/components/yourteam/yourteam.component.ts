@@ -29,6 +29,8 @@ export class YourteamComponent implements OnInit{
         }, 2000);
 
   }
+
+
 }
 
 
