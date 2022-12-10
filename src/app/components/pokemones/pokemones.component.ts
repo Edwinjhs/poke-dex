@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { empty } from 'rxjs';
 import { PokeapiserviceService } from 'src/app/services/pokeapiservice.service';
 
 @Component({
@@ -15,6 +16,12 @@ page: number = 1;
 pokemonsalltypes: any[] = [];
 pokemonstypes: any[] = [];
 mostrar: boolean = true;
+mostrarclear: boolean = false;
+
+
+pokemonlistteam:any []= [];
+pokemonlistteam2:any []= [];
+
 
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ========= CONSTRUCTOR FROM THE SERVICE WHAT HAVE THE API =========
@@ -25,7 +32,9 @@ mostrar: boolean = true;
       this.allPokemons =this.pokeapiserviceservice.getAllPokemons();
       this.pokemons = this.allPokemons
       this.pokemonstypes = this.allPokemons
+      this.pokemonlistteam = this.pokeapiserviceservice.getPokeTeam();
   }
+
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // ====================== FILTER FOR TYPES ===========================
   //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -62,11 +71,17 @@ mostrar: boolean = true;
     this.page=event;
   }
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-  // ================== FILTER FOR TYPE ===============
+  // ================== SELECT YOUR TEAM ===============
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  addPokemons(pokemon:any){
+    // this.pokeapiserviceservice.selectteam({pokemon})
+    if (this.pokemonlistteam.length < 6) {
+      this.pokeapiserviceservice.selectteam({pokemon})
+    }
+  }
 
-  guardarLocalStorage(){
-
+  clearteam(){
+   this.pokemonlistteam.splice(0);
   }
 
 

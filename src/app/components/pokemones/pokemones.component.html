@@ -40,11 +40,11 @@
 
     </ul>
   </div>
-
-
-
-
 </section>
+<div class="yourteam-textbox">
+  <h3 class="title-yourteam">YOUR TEAM</h3>
+  <p class="text-team">Select your 6 pokemons to fight in the battle, you can see your team in the bottom page</p>
+</div>
 
 <div *ngIf="pokemonnotfound" class="box-notfound">
     <div class="notfound-class">
@@ -55,7 +55,7 @@
 </div>
 
 <section class="card-of-pokemons">
-  <div class="card text-center" *ngFor='let pokemon of pokemons | paginate:{ itemsPerPage: 10, currentPage:page, totalItems: pokemons.length}' >
+  <div class="card text-center"  *ngFor='let pokemon of pokemons | paginate:{ itemsPerPage: 8, currentPage:page, totalItems: pokemons.length}' >
     <div class="card-header">
       {{pokemon.id}}- {{ pokemon.name}}
     </div>
@@ -75,8 +75,11 @@
         <!-- <li class="list-group-item">Height: <span>{{ pokemon.height }} ft</span></li>
         <li class="list-group-item">Weight: <span>{{ pokemon.weight }} pounds</span></li> -->
       </ul>
-      <a href="pagenotfound" class="btn btn-primary">QUIERO ESTE POKEMON</a>
+      <form class="d-flex" (click)="addPokemons(pokemon)" #clickpokemon>
+        <a class="btn btn-primary">QUIERO ESTE POKEMON</a>
+      </form>
     </div>
+
   </div>
 </section>
 <pagination-controls class="pagination"
@@ -84,3 +87,35 @@
   nextLabel="Next"
   (pageChange)='OnchangePages($event)'>
 </pagination-controls>
+
+<div class="yourteam-textbox  bottom-text">
+  <div>
+    <h3 class="title-yourteam">YOUR TEAM</h3>
+    <p class="text-team">Select your 6 pokemons to fight in the battle</p>
+    </div>
+  <div class="box-trash">
+    <a (click)="clearteam()" class="trash-buttom"><i class="fa-solid fa-trash"> <h4>clear</h4></i></a>
+  </div>
+</div>
+
+<section class="yourteam">
+    <div class="card text-center"  *ngFor='let poketeamone of pokemonlistteam' >
+      <div class="card-header">
+        {{poketeamone.pokemon.id }}- {{ poketeamone.pokemon.name}}
+      </div>
+      <div class="card-body caja-fon-{{ poketeamone.pokemon.types[0].type.name }}">
+        <img [src]="poketeamone.pokemon.sprites.versions['generation-v']['black-white'].animated.front_default" class="img-pokemon" alt="imagen de pokemon">
+        <!-- <img [src]="poketeamone.pokemon.sprites.front_default" class="img-pokemon" alt="imagen de pokemon"> -->
+      </div>
+      <div class="card-footer text-muted">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Ability: <span>{{ poketeamone.pokemon.abilities[0].ability.name }}</span></li>
+          <li class="list-group-item">Health: <span>{{ poketeamone.pokemon.stats[0].base_stat }}</span></li>
+          <li class="list-group-item">Atack: <span>{{ poketeamone.pokemon.stats[1].base_stat}}</span></li>
+          <!-- <li class="list-group-item">Height: <span>{{ pokemon.height }} ft</span></li>
+          <li class="list-group-item">Weight: <span>{{ pokemon.weight }} pounds</span></li> -->
+        </ul>
+      </div>
+    </div>
+</section>
+
