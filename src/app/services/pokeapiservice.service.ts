@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { PokemonesComponent } from '../components/pokemones/pokemones.component';
 @Injectable({
   providedIn: 'root'
 })
 export class PokeapiserviceService {
-
+  poketeam:any []= [];
 
   constructor(private http:HttpClient) { }
 
@@ -46,20 +46,17 @@ export class PokeapiserviceService {
       })
       return pokemons;
     }
-    // getCategories(){
-    //   var typesPokemons: any [] = [];
-    //   this.getTypesPokemons(151,0).subscribe((response: any) =>{
-    //     response.results.forEach(response);
-    //     typesPokemons.push(response)
 
-    // })
-    // return typesPokemons;
-    // // console.log(typesPokemons);
-    // }
-
-    // this.dataservice.getMoreData(this.name.toLowerCase()).subscribe(
-    //   (d:any) =>{
+    getPokeTeam(){
+      return this.poketeam
+    }
+    selectteam(pokemon:any){
+      this.poketeam.length
+      this.poketeam.push(pokemon);
+        // console.log(pokemon);
+    }
 }
+
 
 
 

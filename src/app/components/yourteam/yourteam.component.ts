@@ -9,12 +9,12 @@ import { PokeapiserviceService } from 'src/app/services/pokeapiservice.service';
 export class YourteamComponent implements OnInit{
   allPokemons: any[] = [];
   pokemonsTeam: any []= [];
-  mostrar: boolean = false
+  mostrar: boolean = false;
+  pokemons: any[] = [];
 
-    constructor(private pokeapiservice: PokeapiserviceService){  }
+  constructor(private pokeapiservice: PokeapiserviceService){  }
 
     ngOnInit(): void {
-
     this.allPokemons = this.pokeapiservice.getAllPokemons(),
 
     setTimeout(() => {
@@ -25,14 +25,10 @@ export class YourteamComponent implements OnInit{
       this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==120)[0]);
       this.pokemonsTeam.push(this.allPokemons.filter(x => x.id==125)[0]);
       // console.log(this.pokemonsTeam);
-
         }, 2000);
 
   }
-
-
 }
-
 
 
 
