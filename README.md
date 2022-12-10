@@ -44,5 +44,5 @@ Something else to keep in mind: Headers and parameters are also important in t
 
 
 ------------
-### You can search the pokemons in the NAVBAR or in POKEDEX, you can also filter them by type, you can see my team and also a pre-selected enemy team.
+### You can search the pokemons in the NAVBAR or in POKEDEX, you can also filter them by type, you can see my team and also a select your team, delete it, and others functions of the website and mobile design
 
